@@ -1,0 +1,201 @@
+<!DOCTYPE html>    
+<html> 
+<script type="text/javascript">
+function validation() {
+
+		var name = document.f1.Uname.value;
+		
+		var email = document.f1.email.value;
+		var pswd = document.f1.Pass.value;
+		
+
+		
+		if (name == null || name == "") {
+			alert("Please enter a Name");
+			return false;
+		} else if (email == null || email == "") {
+			alert("Please enter an Email");
+			return false;
+		} else if (pswd == null || pswd == "") {
+			alert("Please enter an Password");
+			return false;
+		}else if (name.length < 8) {
+			alert("Name should have minimum of 8 characters");
+			return false;
+		} else if (email.length < 10) {
+			alert("Email should have minimum of 10 characters");
+			return false;
+		} else if (!email.includes("@") || !email.includes(".")) {
+			alert("Invalid Email id must contain @ and .")
+			return false;
+		}
+	}
+</script>
+   
+<head>    
+    <title>Register Form</title>   
+     
+    <style>
+    html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+    body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:peal;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+#email{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+} 
+  
+ 
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+}  </style>     
+</head>    
+<body> 
+
+    <h2>Register Page</h2><br>  
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+    <div class="login">  
+        
+    <form id="login" method="post" action="RegInsert" onSubmit="return validation()" name="f1">    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>
+        <label><b>Email    
+        </b>    
+        </label> 
+        <br>
+        <input type="email" name="email" id="email" placeholder="EmailId">    
+        <br><br>        
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br> 
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>   
+        <button type="submit" name="log" id="log" >register here</button>
+        <br><br>  
+        <td><a href="login.html">Already have an Account? Login</a></td>  
+            
+           
+        
+    </form>     
+</div>
+  
+</body>    
+</html>
